@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // MongoDB Connection
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/ecommerce";
+const MONGODB_URI = process.env.MONGODB_URI
 
 if (!process.env.MONGODB_URI) {
   console.warn("⚠️  MONGODB_URI not set, using default localhost connection");
